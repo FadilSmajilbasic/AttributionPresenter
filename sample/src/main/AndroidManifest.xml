@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Copyright (c)  2017  Francisco José Montiel Navarro.
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,9 +14,7 @@
   ~ limitations under the License.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.franmontiel.attributionpresenter.sample">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <application
         android:allowBackup="true"
@@ -26,7 +23,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.franmontiel.attributionpresenter.sample.MainActivity">
+        <activity
+            android:name="com.franmontiel.attributionpresenter.sample.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,22 +34,22 @@
         </activity>
         <activity
             android:name="com.franmontiel.attributionpresenter.sample.ListActivity"
+            android:exported="true"
             android:label="@string/attributions"
-            android:parentActivityName="com.franmontiel.attributionpresenter.sample.MainActivity"
-            tools:targetApi="jelly_bean" />
+            android:parentActivityName="com.franmontiel.attributionpresenter.sample.MainActivity" />
 
         <activity
             android:name="com.franmontiel.attributionpresenter.sample.DarkListActivity"
+            android:exported="true"
             android:label="@string/attributions"
             android:parentActivityName="com.franmontiel.attributionpresenter.sample.MainActivity"
-            android:theme="@style/Theme.AppCompat"
-            tools:targetApi="jelly_bean" />
+            android:theme="@style/Theme.AppCompat" />
 
         <activity
             android:name="com.franmontiel.attributionpresenter.sample.CustomListActivity"
+            android:exported="true"
             android:label="@string/attributions"
-            android:parentActivityName="com.franmontiel.attributionpresenter.sample.MainActivity"
-            tools:targetApi="jelly_bean" />
+            android:parentActivityName="com.franmontiel.attributionpresenter.sample.MainActivity" />
     </application>
 
 </manifest>

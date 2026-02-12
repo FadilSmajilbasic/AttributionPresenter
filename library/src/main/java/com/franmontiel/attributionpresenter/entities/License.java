@@ -29,7 +29,7 @@ public enum License {
     LGPL_3("LGPL-3.0", "http://www.gnu.org/licenses/lgpl-3.0-standalone.html"),
     MIT("MIT License", "https://opensource.org/licenses/MIT");
 
-    private LicenseInfo licenseInfo;
+    private final LicenseInfo licenseInfo;
 
     License(String name, String textUrl) {
         this.licenseInfo = new LicenseInfo(name, textUrl);

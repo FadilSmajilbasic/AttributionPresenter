@@ -17,10 +17,11 @@
 package com.franmontiel.attributionpresenter.sample;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.franmontiel.attributionpresenter.AttributionPresenter;
 
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 
         final AttributionPresenter attributionHelper = AttributionPresenterCreator.create(this);
 
-        Button openDialog = (Button) findViewById(R.id.openDialog);
+        Button openDialog = findViewById(R.id.openDialog);
         openDialog.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button openActivity = (Button) findViewById(R.id.openActivity);
+        Button openActivity = findViewById(R.id.openActivity);
         openActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button openDarkActivity = (Button) findViewById(R.id.openDarkActivity);
+        Button openDarkActivity = findViewById(R.id.openDarkActivity);
         openDarkActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button openCustomActivity = (Button) findViewById(R.id.openCustomActivity);
+        Button openCustomActivity = findViewById(R.id.openCustomActivity);
         openCustomActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -93,7 +93,7 @@ public enum Library {
             .setWebsite("https://github.com/realm/realm-java")
             .build());
 
-    private Attribution attribution;
+    private final Attribution attribution;
 
     Library(Attribution attribution) {
         this.attribution = attribution;

@@ -17,8 +17,8 @@
 package com.franmontiel.attributionpresenter.entities;
 
 public final class LicenseInfo {
-    private String name;
-    private String textUrl;
+    private final String name;
+    private final String textUrl;
 
     LicenseInfo(String name, String textUrl) {
         this.name = name;

@@ -16,7 +16,7 @@
 
 package com.franmontiel.attributionpresenter.entities;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,10 +26,10 @@ import java.util.List;
  */
 public final class Attribution implements Comparable<Attribution> {
 
-    private String name;
-    private List<String> copyrightNotices;
-    private List<LicenseInfo> licensesInfo;
-    private String website;
+    private final String name;
+    private final List<String> copyrightNotices;
+    private final List<LicenseInfo> licensesInfo;
+    private final String website;
 
     private Attribution(String name, List<String> copyrightNotices, List<LicenseInfo> licensesInfo, String website) {
         this.name = name;
@@ -97,9 +97,9 @@ public final class Attribution implements Comparable<Attribution> {
     }
 
     public static class Builder {
-        private String name;
-        private List<String> copyrightNotices;
-        private List<LicenseInfo> licenseInfos;
+        private final String name;
+        private final List<String> copyrightNotices;
+        private final List<LicenseInfo> licenseInfos;
         private String website;
 
         public Builder(String name) {

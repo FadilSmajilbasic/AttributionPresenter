@@ -17,8 +17,10 @@
 package com.franmontiel.attributionpresenter;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
+
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,11 +42,11 @@ import java.util.List;
  */
 public final class AttributionAdapter extends BaseAdapter {
 
-    private List<Attribution> items;
+    private final List<Attribution> items;
     @LayoutRes
-    private int itemLayout;
+    private final int itemLayout;
     @LayoutRes
-    private int licenseLayout;
+    private final int licenseLayout;
     @Nullable
     private final OnAttributionClickListener onAttributionClickListener;
     @Nullable
@@ -84,9 +86,9 @@ public final class AttributionAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = LayoutInflater.from(parent.getContext()).inflate(itemLayout, parent, false);
             holder = new ViewHolder();
-            holder.name = (TextView) convertView.findViewById(R.id.name);
-            holder.copyrightNotices = (TextView) convertView.findViewById(R.id.copyrightNotices);
-            holder.licensesLayout = (ViewGroup) convertView.findViewById(R.id.licensesLayout);
+            holder.name = convertView.findViewById(R.id.name);
+            holder.copyrightNotices = convertView.findViewById(R.id.copyrightNotices);
+            holder.licensesLayout = convertView.findViewById(R.id.licensesLayout);
 
             if (holder.name == null || holder.copyrightNotices == null || holder.licensesLayout == null) {
                 throw new IllegalStateException("Item layout must contain all of the following required views:\n" +
@@ -124,7 +126,7 @@ public final class AttributionAdapter extends BaseAdapter {
 
     private void addLicense(final Context context, ViewGroup licensesLayout, final LicenseInfo licenseInfo) {
         View inflatedView = LayoutInflater.from(context).inflate(licenseLayout, licensesLayout, false);
-        TextView licenseTextView = (TextView) inflatedView.findViewById(R.id.license);
+        TextView licenseTextView = inflatedView.findViewById(R.id.license);
 
         if (licenseTextView == null) {
             throw new IllegalStateException("LicenseInfo layout does not contain a required TextView with android:id=\"@+id/licenseInfo\"");

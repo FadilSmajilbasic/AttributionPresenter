@@ -18,9 +18,9 @@ package com.franmontiel.attributionpresenter;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.support.annotation.LayoutRes;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AlertDialog;
+import androidx.annotation.LayoutRes;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 
 import com.franmontiel.attributionpresenter.entities.Attribution;
 import com.franmontiel.attributionpresenter.entities.Library;
@@ -36,12 +36,12 @@ import java.util.TreeSet;
  */
 public final class AttributionPresenter {
 
-    private Context context;
-    private SortedSet<Attribution> attributions;
+    private final Context context;
+    private final SortedSet<Attribution> attributions;
     private final int itemLayout;
     private final int licenseLayout;
-    private OnAttributionClickListener onAttributionClickListener;
-    private OnLicenseClickListener onLicenseClickListener;
+    private final OnAttributionClickListener onAttributionClickListener;
+    private final OnLicenseClickListener onLicenseClickListener;
 
     private AttributionAdapter attributionAdapter;
 
@@ -91,8 +91,8 @@ public final class AttributionPresenter {
     }
 
     public static class Builder {
-        private Context context;
-        private SortedSet<Attribution> attributions;
+        private final Context context;
+        private final SortedSet<Attribution> attributions;
         @LayoutRes
         private int itemLayout;
         @LayoutRes
