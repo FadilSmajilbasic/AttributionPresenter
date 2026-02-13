@@ -52,6 +52,8 @@ public final class AttributionAdapter extends BaseAdapter {
     @Nullable
     private final OnLicenseClickListener onLicenseClickListener;
 
+
+
     AttributionAdapter(Collection<Attribution> attributions,
                        @LayoutRes int itemLayout,
                        @LayoutRes int licenseLayout,
