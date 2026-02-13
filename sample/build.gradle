@@ -26,6 +26,4 @@ dependencies {
 
     testImplementation 'junit:junit:4.13.2'
     implementation project(':library')
-//    implementation 'com.github.franmontiel:AttributionPresenter:1.0.1'
-
 }

@@ -1,5 +1,7 @@
-apply plugin: 'com.android.library'
-
+plugins {
+    id 'maven-publish'
+    id 'com.android.library'
+}
 group = 'com.github.franmontiel'
 version = '1.1.0'
 
@@ -28,6 +30,16 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.franmontiel.attributionpresenter'
+            artifactId = 'library'
+            version = '1.1.0'
         }
     }
 }
